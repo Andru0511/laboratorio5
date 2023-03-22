@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LABORATORIO5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link href="web.css" rel="stylesheet" type="text/css"/>
+          <link rel="stylesheet" href="fonts.css"/>
+    </head>
+    <body>
+        <header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-list2"></span>Menu</a>
+		</div>
+
+		<nav>
+			<ul>
+				<li><a href="HalcoMilenario.html"><span class="icon-rocket"></span>Halcón Milenario</a></li>
+				<li><a href="DestructorEstelar.html"><span class="icon-rocket"></span>Destructor Estelar</a></li>
+				<li><a href="LanzaderaImperial.html"><span class="icon-rocket"></span>Lanzadera imperial</a></li>
+				<li><a href="Supremacy.html"><span class="icon-rocket"></span>Supremacyy</a></li>
+				<li><a href="AtAt.html"><span class="icon-rocket"></span>At-At</a></li>
+                                <li><a href="ConsumodeCombustible.html"><span class="icon-blocked"></span>Consumo de Combustible</a></li>
+			</ul>
+		</nav>
+	</header>
+        <section>
+            <p>
+             La Alianza rebelde requiere conocer el combustible necesario para enfrentar al Imperio,
+             en la Guerra Civil imperial, la alianza cuenta con5 tipos de naves: Halcón Milenario, 
+             Destructor Estelar, Lanzadera imperial, Supremacyy At-At, para cada unose debe tenersu tipo, 
+             el número de personas que puede transportar, consumo de combustible en litros por Parsec y 
+             la cantidad de naves deltipo. Usted debe ayudar a la alianza realizando un programa en Java, 
+             que permita ingresar ymostrar todos los datos.Calcule también el combustible total necesario,
+             de acuerdo conlos Parsec que se ingresen (correspondientes a la estimación que se tiene de cuánto 
+             viajarán durantela guerra), tenga en cuenta que los Supremacy adicionalmente, transportan naves y
+             el cálculo del combustible de estos debe hacerse aumentando el consumo en un 10% por el número de 
+             naves que pueden cargar. En el caso de los At-At, que se mueven solo en tierra reste al consumo 25%.  
+            </p>
+            
+            <p>
+             Condiciones:  
+            </p>
+            
+            <p>
+             Equipos de máximo 3 estudiantes.  
+            </p>
+            
+            <p>
+             Use: Interfaz Web –POO–Diagramas deClases y Casos de Uso –Entrega por GIT.   
+            </p>
+            
+        </section>
+        <script src="http://code.jquery.com/jquery-latest.js"></script> 
+              <script src="menu.js"></script> 
+              
+              <script type="text/javascript">
+                  $(document).ready(main);
+
+        var contador = 1;
+
+function main(){
+	$('.menu_bar').click(function(){
+		// $('nav').toggle(); 
+
+		if(contador == 1){
+			$('nav').animate({
+				left: '0'
+			});
+			contador = 0;
+		} else {
+			contador = 1;
+			$('nav').animate({
+				left: '-100%'
+			});
+		}
+
+	});
+
+};
+                  
+              </script> 
+    </body>
+</html>

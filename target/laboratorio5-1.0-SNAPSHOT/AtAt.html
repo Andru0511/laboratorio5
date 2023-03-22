@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LABORATORIO5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link href="web.css" rel="stylesheet" type="text/css"/>
+          <link rel="stylesheet" href="fonts.css"/>
+    </head>
+    <body>
+        <header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-list2"></span>Menu</a>
+		</div>
+
+		<nav>
+			<ul>
+				<li><a href="HalcoMilenario.html"><span class="icon-rocket"></span>Halcón Milenario</a></li>
+				<li><a href="DestructorEstelar.html"><span class="icon-rocket"></span>Destructor Estelar</a></li>
+				<li><a href="LanzaderaImperial.html"><span class="icon-rocket"></span>Lanzadera imperial</a></li>
+				<li><a href="Supremacy.html"><span class="icon-rocket"></span>Supremacyy</a></li>
+				<li><a href="AtAt.html"><span class="icon-rocket"></span>At-At</a></li>
+                                <li><a href="ConsumodeCombustible.html"><span class="icon-blocked"></span>Consumo de Combustible</a></li>
+			</ul>
+		</nav>
+	</header>
+        <section>
+            <form action="">
+                <table border="1" align="center">
+                    <tr>
+                        <td>
+                            Ingrese el Tipo:
+                            <input type="text" name="a" id="tipo"> 
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            Ingrese el numero de personas que se transportan:
+                            <input type="text" name="b" id="numPer"> 
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            Ingrese el consumo de conbustible en ltrs:
+                            <input type="text" name="a" id="consumoCon"> 
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            Ingrese la catidad de naves del tipo:
+                            <input type="text" name="a" id="cantidadNav"> 
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <button type="" onclick="guardar()" > Guardar</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+            
+            <p>
+               
+            </p>
+            
+        </section>
+        <script src="http://code.jquery.com/jquery-latest.js"></script> 
+              <script src="menu.js"></script> 
+              
+              <script type="text/javascript">
+                  //Logica del menu desplegable
+                  $(document).ready(main);
+
+        var contador = 1;
+
+function main(){
+	$('.menu_bar').click(function(){
+		// $('nav').toggle(); 
+
+		if(contador == 1){
+			$('nav').animate({
+				left: '0'
+			});
+			contador = 0;
+		} else {
+			contador = 1;
+			$('nav').animate({
+				left: '-100%'
+			});
+		}
+
+	});
+
+};
+//Operaciones del menu
+//Capturar datos
+   function guardar(){
+       var tipodat=document.getElementById("tipo").value;
+       alert(tipodat);
+       var tipodat=document.getElementById("numPer").value;
+       alert(tipodat);
+       var tipodat=document.getElementById("consumoCon").value;
+       alert(tipodat);
+       var tipodat=document.getElementById("cantidadNav").value;
+       alert(tipodat);
+       
+       
+   }
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              </script> 
+    </body>
+</html>
